@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Rixy Studio</title>
+    <link rel="shortcut icon" href="./assets/Images/Rixy.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Images/Rixy.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Images/Rixy.png">
+
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link href="https://kit-pro.fontawesome.com/releases/v6.7.2/css/pro.min.css" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.css" />
+    <script src="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Athiti:wght@200;300;400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Mitr:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap" rel="stylesheet">
+
+    <script src='./assets/Scripts/tinysort.js'></script>
+    <script src="./assets/Scripts/sweetalert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <link href="./assets/Styles/bootstrap4.0.0.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css'>
+
+    <script src='https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js'></script>
+    <script src='https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js'></script>
+    <link rel="stylesheet" href="./assets/Styles/Main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.3/dist/bootstrap-table.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3319994155032571" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --color-main: #9c38ff;
+            --color-main-opa-75: #9c38ff75;
+            --color-main-opa-50: #9c38ff50;
+            --color-main-opa-25: #9c38ff25;
+            --color-main-opa-15: #9c38ff15;
+
+            --color-button: #9c38ff;
+            --color-button-opa-75: #9c38ff75;
+            --color-button-opa-50: #9c38ff50;
+            --color-button-opa-25: #9c38ff25;
+            --color-button-opa-15: #9c38ff15;
+
+            --color-text: #9c38ff;
+            --color-text-opa-85: #9c38ff85;
+            --color-text-opa-75: #9c38ff75;
+            --color-text-opa-50: #9c38ff50;
+            --color-text-opa-25: #9c38ff25;
+            --color-text-opa-15: #9c38ff15;
+
+            --color-border: #dee2e6;
+            --color-bg-theme: #fff;
+            --color-text-theme: #0009;
+            --color-text-theme-opa-25: #6c757d20;
+            --color-text-theme-opa-50: #6c757d50;
+            --color-text-theme-opa-75: #6c757d75;
+            --color-text-theme-opa-85: #6c757d85;
+        }
+
+        .border {
+            border: 1px solid var(--color-border) !important;
+        }
+
+        *:not(i) {
+            font-family: 'Kanit', sans-serif;
+            font-weight: normal !important;
+        }
+
+        body {
+            background-color: #ededed;
+            /*background-image: url('https://img2.pic.in.th/pic/1920x1080.webp');*/
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        .widget-icon {
+            color: var(--color-main);
+            font-size: 24px;
+            background-color: #9c38ff20;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 3px;
+            display: inline-block
+        }
+
+        .text-theme,
+        .text-theme i {
+            color: var(--color-text-theme) !important;
+        }
+
+        .image-size-tag {
+            /* &nbsp;<span class="image-size-tag">1,500 x 1,500</span> */
+            position: relative;
+            width: max-content;
+            height: fit-content;
+            top: -3px;
+            padding-left: 1vh;
+            padding-right: 1vh;
+            padding-top: 0.3vh;
+            padding-bottom: 0.3vh;
+            border-radius: 90vh;
+            font-size: 11px;
+            line-height: 0.5vh;
+            font-weight: 500 !important;
+            background-color: var(--color-main-opa-25);
+            color: var(--color-main);
+            border: 1.5px solid var(--color-main);
+        }
+
+        .nav-search {
+            background-color: transparent;
+            display: block;
+            text-decoration: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .input-blur {
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+
+        .input-blur:hover,
+        .input-blur:active,
+        .input-blur:focus {
+            filter: blur(0px);
+            -webkit-filter: blur(0px);
+        }
+
+        table:not(.not-td-hover) tbody tr:nth-of-type(odd) {
+            background-color: rgba(156, 56, 255, 0.02) !important;
+        }
+
+        table:not(.not-td-hover) tr:hover td {
+            background-color: rgba(156, 56, 255, 0.05) !important;
+        }
+    </style>
+</head>
+
+
+<body onload='let scroll = window.scrollY; let scrollString = scroll.toString(); localStorage.setItem("scrollPosition_Body", scrollString);'>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDBML97X8Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HDBML97X8Q');
+    </script>
+
+    <style>
+        .loader {
+            height: 100%;
+            width: 100%;
+            background: var(--color-main);
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .load-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .icon {
+            display: block;
+            max-height: 80px;
+        }
+    </style>
+
+    <div class="loader">
+        <img class="icon" src="./assets/Images/Loader/cat_v2.gif">
+    </div>
+
+    <script>
+        window.addEventListener("load", (event) => {
+            setTimeout(() => {
+                $(".loader").addClass("load-hidden")
+            }, 250);
+        });
+
+        document.addEventListener("readystatechange", (event) => {
+            setTimeout(() => {
+                $(".loader").addClass("load-hidden")
+            }, 250);
+        });
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            setTimeout(() => {
+                $(".1oader").addClass("load-hidden")
+            }, 250);
+        });
+    </script>
+    <nav class="navbar navbar-expand-xl sticky-top mb-0" id="nav_main">
+        <div class="bg-light container-lg border" style="border-radius: 15px;">
+            <button class="btn btn-transparent text-main d-block d-lg-block d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-duotone fa-solid fa-bars" style="font-size: 25px;"></i>
+            </button>
+            <a class="navbar-brand d-none d-lg-none d-xl-block" href="./Homepage.html"><img src="./assets/Images/Rixy.png" height="55px" width="auto"></a>
+            <a class="navbar-brand pt-2 pb-2" style="height: 65px;"></a>
+            <div class="offcanvas offcanvas-start " style="max-width: 90%; box-shadow: 0 0 0 0 transparent !important;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-center mb-2 mb-lg-0">
+                        <!----------------- Mobile ----------------->
+                        <li class="nav-item d-block d-lg-block d-xl-none mb-3">
+                            <a href="./Homepage.html"><img src="./assets/Images/Rixy.png" height="55px" width="auto"></a>
+                        </li>
+                        <li class="nav-item d-block d-lg-block d-xl-none">
+                            <div class="row justify-content-center">
+                                <div class="d-flex mb-0 px-5">
+                                    <hr class="my-auto mb-0 flex-grow-1">
+                                    <h5 class="text-theme px-4 mt-0 mb-0">เมนู</h5>
+                                    <hr class="my-auto mb-0 flex-grow-1">
+                                </div>
+                                <a class="text-theme my-2" href="./Homepage.html"><i class="fa-duotone fa-solid fa-house"></i>&nbsp;&nbsp;หน้าหลัก</a>
+                                <a class="text-theme my-2" href="./Uitemplate.html"><i class="fa-duotone fa-solid fa-window-restore"></i>&nbsp;&nbsp;UI Template</a>
+                                <a class="text-theme my-2" href="./Scripts.html"><i class="fa-duotone fa-solid fa-code"></i>&nbsp;&nbsp;Scripts</a>
+                                <a class="text-theme my-2" href="https://discord.gg/ApNxrnDsAN"><i class="fa-duotone fa-solid fa-headset"></i>&nbsp;&nbsp;ติดต่อเรา</a>
+
+                                <div class="d-flex mb-0 px-5 mt-3">
+                                    <hr class="my-auto mb-0 flex-grow-1">
+                                </div>
+                            </div>
+                        </li>
+                        <!----------------- PC ----------------->
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 nav-v1 " href="./Homepage.html">
+                            <i class="fa-duotone fa-solid fa-house"></i>&nbsp;หน้าหลัก </a>
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 nav-v1 nav-v1-active" href="./Uitemplate.html">
+                            <i class="fa-duotone fa-solid fa-window-restore"></i>&nbsp;UI Template </a>
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 nav-v1 " href="./Scripts.html">
+                            <i class="fa-duotone fa-solid fa-code"></i>&nbsp;Scripts </a>
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 nav-v1 " href="https://discord.gg/ApNxrnDsAN">
+                            <i class="fa-duotone fa-solid fa-headset"></i>&nbsp;ติดต่อเรา </a>
+
+                    </ul>
+                </div>
+            </div>
+            <li class="nav-item ms-0 ms-lg-0 ms-xl-3 me-0 me-lg-0 me-xl-3 p-0" style="list-style: none;"></li>
+            <li class="nav-item dropdown ms-0" style="list-style: none;">
+                <a class="nav-link p-0" style="border-radius: 1vh;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <img class="profile-picture rounded-circle border-main m-0 p-0" style="max-width: 30px; max-height: 30px;" src="./assets/Images/icon.webp">
+                </a>
+                <ul class="dropdown-menu bg-light border p-0" style="border-radius: 1vh;" aria-labelledby="navbarDropdown">
+                    <div class="d-flex justify-content-center align-items-center mt-1 p-0">
+                        <img class="profile-picture border-main rounded-circle m-2 p-0" style="max-width: 30px; max-height: 30px;" src="./assets/Images/icon.webp">
+                        <div class="row justify-content-center m-0 py-0 px-2">
+                            <p id="navbar_username" class="col-12 text-theme text-left m-0 p-0">nil</p>
+                            <small id="navbar_email" class="col-12 text-theme text-left m-0 p-0">nil</small>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider my-1"></div>
+                    <li>
+                        <a id="navbar_points" class="dropdown-item text-theme pt-2 pb-0 ps-2" href="./profile.html">
+                            <i class="fa-duotone fa-solid fa-wallet"></i>&nbsp;&nbsp;คงเหลือ : 0฿
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-theme pt-2 pb-0 ps-2" href="./profile.html">
+                            <i class="fa-duotone fa-solid fa-circle-user"></i>&nbsp;&nbsp;โปรไฟล์
+                        </a>
+                    </li>
+                    <div class="dropdown-divider my-1"></div>
+                    <li>
+                        <a id="logoutbtn" class="dropdown-item text-theme pt-2 pb-1 ps-2">
+                            <i class="fa-duotone fa-solid fa-arrow-right-from-bracket"></i>&nbsp;&nbsp;ออกจากระบบ
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </nav>
+    <style>
+        .btn-close-announce,
+        .btn-close-announce:hover {
+            position: absolute;
+            bottom: -55px;
+            font-size: 30px;
+            background: transparent !important;
+            color: #fff;
+            text-shadow: 0px 0px 1px rgb(0, 0, 0);
+            border: 0;
+        }
+
+        .checkbox-wrapper-30 .checkbox {
+            --dur: calc((var(--size, 2)/2) * 0.4s);
+            display: inline-block;
+            width: calc(var(--size, 1) * 22px);
+            position: relative;
+        }
+
+        .checkbox-wrapper-30 .checkbox:after {
+            content: "";
+            width: 100%;
+            padding-top: 100%;
+            display: block;
+        }
+
+        .checkbox-wrapper-30 .checkbox>* {
+            position: absolute;
+        }
+
+        .checkbox-wrapper-30 .checkbox input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: calc(var(--size, 1) * 4px);
+            border: calc(var(--newBrdr, var(--size, 1)) * 1px) solid;
+            color: var(--newBrdrClr, #fff);
+            outline: none;
+            margin: 0;
+            padding: 0;
+            transition: all calc(var(--dur) / 3) linear;
+        }
+
+        .checkbox-wrapper-30 .checkbox input:hover,
+        .checkbox-wrapper-30 .checkbox input:checked {
+            --newBrdr: calc(var(--size, 1) * 2);
+        }
+
+        .checkbox-wrapper-30 .checkbox input:hover {
+            --newBrdrClr: #fff;
+        }
+
+        .checkbox-wrapper-30 .checkbox input:checked {
+            --newBrdrClr: #fff;
+            transition-delay: calc(var(--dur) /1.3);
+        }
+
+        .checkbox-wrapper-30 .checkbox input:checked+svg {
+            --dashArray: 16 93;
+            --dashOffset: 109;
+        }
+
+        .checkbox-wrapper-30 .checkbox svg {
+            fill: none;
+            left: 0;
+            pointer-events: none;
+            stroke: var(--stroke, var(--border-active));
+            stroke-dasharray: var(--dashArray, 93);
+            stroke-dashoffset: var(--dashOffset, 94);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2px;
+            top: 0;
+            transition: stroke-dasharray var(--dur), stroke-dashoffset var(--dur);
+        }
+
+        .checkbox-wrapper-30 .checkbox svg,
+        .checkbox-wrapper-30 .checkbox input {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        .annouce-popup-text-check {
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        @media (max-width: 1199.98px) {
+            .checkbox-wrapper-30 .checkbox {
+                width: calc(var(--size, 1) * 20px);
+            }
+
+            .annouce-popup-text-check {
+                font-size: 12px;
+            }
+        }
+
+        #app-cover {
+            margin-top: 0px;
+            width: 350px;
+            height: 50px;
+        }
+
+        #player {
+            position: relative;
+            height: 100%;
+            z-index: 3;
+        }
+
+        #player-track {
+            text-align: left;
+            margin-left: -170px;
+            padding: 13px 22px 10px 184px;
+            border-radius: 15px 15px 0 0;
+            transition: 0.3s ease top;
+            z-index: 1;
+            width: 525px;
+        }
+
+        #player-track.active #album-name {
+            color: var(--color-main-opa-75);
+        }
+
+        #album-name {
+            color: var(--color-main);
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        #track-name {
+            color: var(--color-main);
+            font-size: 13px;
+            margin: 2px 0 13px 0;
+        }
+
+        #track-time {
+            height: 12px;
+            margin-bottom: 6px;
+            overflow: hidden;
+        }
+
+        #current-time {
+            float: left;
+        }
+
+        #track-length {
+            float: right;
+        }
+
+        #current-time,
+        #track-length {
+            color: transparent;
+            font-size: 11px;
+            border-radius: 10px;
+            transition: 0.3s ease all;
+        }
+
+        #track-time.active #current-time,
+        #track-time.active #track-length {
+            color: var(--color-main);
+        }
+
+        #s-area,
+        #seek-bar {
+            position: relative;
+            height: 6px;
+            border-radius: 4px;
+        }
+
+        #s-area {
+            background-color: var(--color-main-opa-25);
+            cursor: pointer;
+        }
+
+        #ins-time {
+            position: absolute;
+            top: -29px;
+            color: var(--color-main);
+            font-size: 12px;
+            white-space: pre;
+            padding: 5px 6px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        #s-hover {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.2;
+            z-index: 2;
+        }
+
+        #ins-time,
+        #s-hover {
+            background-color: transparent;
+        }
+
+        #seek-bar {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            background-color: var(--color-main-opa-75);
+            transition: 0.2s ease width;
+            z-index: 1;
+        }
+
+        #player-content {
+            position: relative;
+            height: 100%;
+            background-color: var(--color-sub);
+            border-radius: 15px;
+            z-index: 2;
+        }
+
+        #album-art {
+            position: absolute;
+            top: 15px;
+            right: 0;
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            transform: rotateZ(0);
+            transition: 0.3s ease all;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        #album-art.active {
+            transform: scale(1.1);
+        }
+
+        #album-art img {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        #album-art img.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        #album-art.active img.active {
+            z-index: 1;
+            animation: rotateAlbumArt 3s linear 0s infinite forwards;
+        }
+
+        @keyframes rotateAlbumArt {
+            0% {
+                transform: rotateZ(0);
+            }
+
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        #buffer-box {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            height: 13px;
+            color: var(--color-main);
+            font-size: 15px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1;
+            padding: 6px;
+            margin: -12px auto 0 auto;
+            background-color: rgba(255, 255, 255, 0.19);
+            opacity: 0;
+            z-index: 2;
+        }
+
+        #album-art img,
+        #buffer-box {
+            transition: 0.1s linear all;
+        }
+
+        #album-art.buffering img {
+            opacity: 0.25;
+        }
+
+        #album-art.buffering img.active {
+            opacity: 0.8;
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+        }
+
+        #album-art.buffering #buffer-box {
+            opacity: 1;
+        }
+
+        #player-controls {
+            margin-top: 5px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .buttonmusic {
+            margin-top: -12px;
+            padding: 25px;
+            width: 30px;
+            background-color: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .buttonmusic i {
+            color: var(--color-main);
+            font-size: 20px;
+        }
+
+        .buttonmusic,
+        .buttonmusic i {
+            transition: 0.2s ease all;
+        }
+
+        .buttonmusic:hover i {
+            color: var(--color-main-opa-75);
+            transform: scale(1.2);
+        }
+    </style>
+
+    <div class="container m-cent pt-2 pb-5 mb-5" style="min-height: 700px;">
+        <div class="text-center mt-4">
+            <h3 class="text-main m-0">จำหน่าย Template Ui</h3>
+            <h5 class="text-theme mb-0">Rixy Studio</p>
+        </div>
+        <div id="list-product" class="row-product-card justify-content-lg-start">
+        </div>
+    </div>
+
+    <style>
+        .hidden-input-auto-fill {
+            opacity: 0 !important;
+            width: 0px !important;
+            height: 0px !important;
+            z-index: 0 !important;
+        }
+    </style>
+    <input type="text" class="hidden-input-auto-fill">
+
+    <style>
+        .footer {
+            position: relative;
+            width: 100%;
+            margin-top: 300px;
+            min-height: 100px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #fff;
+        }
+
+        .wave {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("https://img2.pic.in.th/pic/wave.webp");
+            background-size: 1000px 100px;
+        }
+
+        .wave#wave1 {
+            z-index: 5;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWaves 4s linear infinite;
+        }
+
+        .wave#wave2 {
+            z-index: 4;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animate 4s linear infinite !important;
+        }
+
+        .wave#wave3 {
+            z-index: 5;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: animateWaves 3s linear infinite;
+        }
+
+        .wave#wave4 {
+            z-index: 4;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: animate 3s linear infinite;
+        }
+
+        @keyframes animateWaves {
+            0% {
+                background-position-x: 1000px;
+            }
+
+            100% {
+                background-positon-x: 0px;
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: -1000px;
+            }
+
+            100% {
+                background-positon-x: 0px;
+            }
+        }
+    </style>
+
+    <footer class="footer shadow">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-4 text-center mb-3">
+                    <img style="animation: bounce-3 1s infinite" src="./assets/Images/Rixy.png" width="200">
+                    <br>
+                    <h5 class="text-main" style="animation: bounce 1s infinite">Rixy Studio</h5>
+                    <h6 class="text-main" style="animation: bounce 1s infinite">Rixy Studio จำหน่าย UI | Scripts</h6>
+                </div>
+                <div class="col-12 col-lg-2 mb-3 justify-content-center">
+                    <h5 class="text-main">เมนูหลัก</h5>
+                    <div class="text-left mb-2">
+                        <a href="./Homepage.html" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-house text-main icon-white"></i>&nbsp;หน้าหลัก</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-stars text-main icon-white"></i>&nbsp;อัปเกรดฟังชั่น</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-wallet text-main icon-white"></i>&nbsp;เติมเงิน</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="https://discord.gg/ApNxrnDsAN" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-headset text-main icon-white"></i>&nbsp;ติดต่อเรา</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2 mb-3 justify-content-center">
+                    <h5 class="text-main">ประวัติต่างๆ</h5>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-store"></i>&nbsp;&nbsp;ประวัติการซื้อสินค้า</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-wallet"></i>&nbsp;&nbsp;ประวัติการเติมซองอังเปา</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-piggy-bank"></i>&nbsp;&nbsp;ประวัติการเติมเงินธนาคาร</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-gift"></i>&nbsp;&nbsp;ประวัติการเติมโค้ด</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 text-center mb-3">
+                    <center>
+                        <iframe src="https://discord.com/widget?id=1338708813607469148&theme=dark" width="285" height="280" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    </center>
+                </div>
+            </div>
+            <center style="font-size: 14px;">
+                <p class="m-0 mb-1 text-main"><strong class="text-main"><i class="fa-duotone fa-solid fa-copyright text-main"></i>&nbsp; 2025 Final Project By Ratchanont Chamnankarn, All right reserved.</strong></p>
+                <p class="m-0 text-main"><i class="fa-duotone fa-solid fa-cog fa-spin text-main"></i>&nbsp; Rixy Studio | Inspired By pulawat6680<a href="https://discord.gg/ApNxrnDsAN" style="text-decoration: none;color: #39b3fe"> ติดต่อเจ้าของร้านไม่ได้ / แจ้งปัญหาร้านค้าโกง</a></small>
+            </center>
+        </div>
+    </footer>
+    <script src="./assets/Scripts/FunctionsHandler.js"></script>
+    <script src="./assets/Scripts/Bypulawat6680.js"></script>
+    <script src="./assets/Scripts/Uitem.js"></script>
+    <script src="./assets/Scripts/navbar.js"></script>
+</body>
+
+</html>

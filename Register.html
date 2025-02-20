@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Rixy Studio</title>
+    <link rel="shortcut icon" href="./assets/Images/Rixy.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Images/Rixy.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Images/Rixy.png">
+
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link href="https://kit-pro.fontawesome.com/releases/v6.7.2/css/pro.min.css" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.css" />
+    <script src="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Athiti:wght@200;300;400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Mitr:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap" rel="stylesheet">
+
+    <script src='./assets/Scripts/tinysort.js'></script>
+    <script src="./assets/Scripts/sweetalert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <link href="./assets/Styles/bootstrap4.0.0.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css'>
+
+    <script src='https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js'></script>
+    <script src='https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js'></script>
+    <link rel="stylesheet" href="./assets/Styles/Main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.3/dist/bootstrap-table.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3319994155032571" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --color-main: #9c38ff;
+            --color-main-opa-75: #9c38ff75;
+            --color-main-opa-50: #9c38ff50;
+            --color-main-opa-25: #9c38ff25;
+            --color-main-opa-15: #9c38ff15;
+
+            --color-button: #9c38ff;
+            --color-button-opa-75: #9c38ff75;
+            --color-button-opa-50: #9c38ff50;
+            --color-button-opa-25: #9c38ff25;
+            --color-button-opa-15: #9c38ff15;
+
+            --color-text: #9c38ff;
+            --color-text-opa-85: #9c38ff85;
+            --color-text-opa-75: #9c38ff75;
+            --color-text-opa-50: #9c38ff50;
+            --color-text-opa-25: #9c38ff25;
+            --color-text-opa-15: #9c38ff15;
+
+            --color-border: #dee2e6;
+            --color-bg-theme: #fff;
+            --color-text-theme: #0009;
+            --color-text-theme-opa-25: #6c757d20;
+            --color-text-theme-opa-50: #6c757d50;
+            --color-text-theme-opa-75: #6c757d75;
+            --color-text-theme-opa-85: #6c757d85;
+        }
+
+        .border {
+            border: 1px solid var(--color-border) !important;
+        }
+
+        *:not(i) {
+            font-family: 'Kanit', sans-serif;
+            font-weight: normal !important;
+        }
+
+        body {
+            background-color: #ededed;
+            /*background-image: url('https://img2.pic.in.th/pic/1920x1080.webp');*/
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        .widget-icon {
+            color: var(--color-main);
+            font-size: 24px;
+            background-color: #9c38ff20;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 3px;
+            display: inline-block
+        }
+
+        .text-theme,
+        .text-theme i {
+            color: var(--color-text-theme) !important;
+        }
+
+        .image-size-tag {
+            /* &nbsp;<span class="image-size-tag">1,500 x 1,500</span> */
+            position: relative;
+            width: max-content;
+            height: fit-content;
+            top: -3px;
+            padding-left: 1vh;
+            padding-right: 1vh;
+            padding-top: 0.3vh;
+            padding-bottom: 0.3vh;
+            border-radius: 90vh;
+            font-size: 11px;
+            line-height: 0.5vh;
+            font-weight: 500 !important;
+            background-color: var(--color-main-opa-25);
+            color: var(--color-main);
+            border: 1.5px solid var(--color-main);
+        }
+
+        .nav-search {
+            background-color: transparent;
+            display: block;
+            text-decoration: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .input-blur {
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+
+        .input-blur:hover,
+        .input-blur:active,
+        .input-blur:focus {
+            filter: blur(0px);
+            -webkit-filter: blur(0px);
+        }
+
+        table:not(.not-td-hover) tbody tr:nth-of-type(odd) {
+            background-color: rgba(156, 56, 255, 0.02) !important;
+        }
+
+        table:not(.not-td-hover) tr:hover td {
+            background-color: rgba(156, 56, 255, 0.05) !important;
+        }
+    </style>
+</head>
+
+
+<body onload='let scroll = window.scrollY; let scrollString = scroll.toString(); localStorage.setItem("scrollPosition_Body", scrollString);'>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDBML97X8Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HDBML97X8Q');
+    </script>
+
+    <style>
+        .loader {
+            height: 100%;
+            width: 100%;
+            background: var(--color-main);
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .load-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .icon {
+            display: block;
+            max-height: 80px;
+        }
+    </style>
+
+    <div class="loader">
+        <img class="icon" src="./assets/Images/Loader/cat_v2.gif">
+    </div>
+
+    <script>
+        window.addEventListener("load", (event) => {
+            setTimeout(() => {
+                $(".loader").addClass("load-hidden")
+            }, 250);
+        });
+
+        document.addEventListener("readystatechange", (event) => {
+            setTimeout(() => {
+                $(".loader").addClass("load-hidden")
+            }, 250);
+        });
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            setTimeout(() => {
+                $(".1oader").addClass("load-hidden")
+            }, 250);
+        });
+    </script>
+    <nav class="navbar navbar-expand-xl sticky-top mb-0" id="nav_main">
+        <div class="bg-light container-lg border" style="border-radius: 15px;">
+            <button class="btn btn-transparent text-main d-block d-lg-block d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-duotone fa-solid fa-bars" style="font-size: 25px;"></i>
+            </button>
+            <a class="navbar-brand d-none d-lg-none d-xl-block" href="./index.html"><img src="./assets/Images/Rixy.png" height="55px" width="auto"></a>
+            <a class="navbar-brand pt-2 pb-2" style="height: 65px;"></a>
+            <div class="offcanvas offcanvas-start " style="max-width: 90%; box-shadow: 0 0 0 0 transparent !important;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-center mb-2 mb-lg-0">
+                        <!----------------- Mobile ----------------->
+                        <li class="nav-item d-block d-lg-block d-xl-none mb-3">
+                            <a href="./index.html"><img src="./assets/Images/Rixy.png" height="55px" width="auto"></a>
+                        </li>
+                        <li class="nav-item d-block d-lg-block d-xl-none">
+                            <div class="row justify-content-center">
+                                <div class="d-flex mb-0 px-5">
+                                    <hr class="my-auto mb-0 flex-grow-1">
+                                    <h5 class="text-theme px-4 mt-0 mb-0">เมนู</h5>
+                                    <hr class="my-auto mb-0 flex-grow-1">
+                                </div>
+                                <a class="text-theme my-2" href="./index.html"><i class="fa-duotone fa-solid fa-house"></i>&nbsp;&nbsp;หน้าหลัก</a>
+                                <a class="text-theme my-2" href="#"><i class="fa-duotone fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;สินค้าทั่วไป</a>
+                                <a class="text-theme my-2" href="https://discord.gg/ApNxrnDsAN"><i class="fa-duotone fa-solid fa-headset"></i>&nbsp;&nbsp;ติดต่อเรา</a>
+
+
+                                <div class="d-flex mb-0 px-5 mt-3">
+                                    <hr class="my-auto mb-0 flex-grow-1">
+                                    <h5 class="text-theme px-4 mt-0 mb-0">เข้าสู่ระบบ / สมัครสมาชิก</h5>
+                                    <hr class="my-auto mb-0 flex-grow-1">
+                                </div>
+                                <a class="text-theme my-2" href="./Login.html"><i class="fa-duotone fa-solid fa-arrow-right-to-bracket"></i>&nbsp;&nbsp;เข้าสู่ระบบ</a>
+                                <a class="text-theme my-2" href="./Register.html"><i class="fa-duotone fa-solid fa-square-plus"></i>&nbsp;&nbsp;สมัครสมาชิก</a>
+                            </div>
+                        </li>
+                        <!----------------- PC ----------------->
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 nav-v1 " href="./index.html">
+                            <i class="fa-duotone fa-solid fa-house"></i>&nbsp;หน้าหลัก </a>
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 nav-v1 " href="./Login.html">
+                            <i class="fa-duotone fa-solid fa-bag-shopping"></i>&nbsp;สินค้าทั่วไป</a>
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 nav-v1 " href="https://discord.gg/ApNxrnDsAN">
+                            <i class="fa-duotone fa-solid fa-headset"></i>&nbsp;ติดต่อเรา </a>
+
+                        <a class="d-none d-lg-none d-xl-block ms-lg-3 btn btn-main py-1 px-2" href="./Login.html">เข้าสู่ระบบ</a>
+                        <a class="d-none d-lg-none d-xl-block ms-lg-2 btn btn-secondary py-1 px-2" href="./Register.html">สมัครสมาชิก</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .toggle-password {
+            float: right;
+            margin-top: -34px;
+            position: relative;
+            z-index: 2;
+            font-size: 16px;
+            color: var(--color-main);
+        }
+    
+        .logo-anim {
+            transition: 0.5s ease-in-out;
+            animation: bounce-10 1s infinite;
+        }
+    
+        @keyframes bounce-10 {
+    
+            0% {
+                transform: none;
+                animation-timing-function: cubic-bezier(0, 0, .2, 1)
+            }
+    
+            50% {
+                transform: translateY(-10%) scale(1.01);
+                animation-timing-function: cubic-bezier(.5, 0, 1, 1)
+            }
+    
+            1000% {
+                transform: none;
+                animation-timing-function: cubic-bezier(0, 0, .2, 1)
+            }
+        }
+    
+        #register-form {
+            width: 100%;
+        }
+    
+        #register-form .input {
+            position: relative;
+        }
+    
+        #register-form .input label {
+            pointer-events: none;
+            font-size: 18px;
+            line-height: 1.5;
+            position: absolute;
+            top: 7px;
+            left: 10px;
+            transform-origin: 0 50%;
+            transform: translateY(var(--label-y, 0)) scale(var(--label-scale, 1)) translateZ(0);
+            transition: transform 0.3s, color 0.3s;
+        }
+    
+        #register-form .input input {
+            width: 100%;
+            border-radius: 0;
+            -webkit-appearance: none;
+        }
+    
+        #register-form .input input:not(:placeholder-shown)+label,
+        #register-form .input input:focus+label {
+            --label-y: -32px;
+            --label-scale: 0.9;
+            left: 5px;
+        }
+    
+        #register-form .input {
+            margin-bottom: 16px;
+        }
+    
+        #register-form .input input {
+            background: none;
+            outline: none;
+            border: 1px solid #ced4da;
+            border-radius: 0.75rem;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.025em;
+            line-height: 22px;
+            padding: 10px;
+        }
+    
+        .power-container {
+            background-color: #38b3ff20;
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            margin-top: 0px;
+        }
+    
+        .power-container #power-point {
+            background-color: #D73F40;
+            width: 1%;
+            height: 100%;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+    
+        @media screen and (min-width: 601px) {
+            #register {
+                margin-bottom: 250px;
+            }
+        }
+    
+        @media screen and (max-width: 600px) {
+            #register {
+                margin-bottom: 400px;
+            }
+        }
+    </style>
+    
+    
+    <div class="d-flex justify-content-center" style="min-height: 700px;">
+        <div class="container-sm" style="position: absolute; margin-top: 80px;">
+            <div class="row justify-content-center ">
+                <div class="col-lg-5 p-4">
+                    <div class="container-fluid border bg-light p-4" style="border-radius: 15px;">
+                        <div class="d-flex mt-2">
+                            <div class="w-100 ms-2">
+                                <h4 class="text-main mb-1">สมัครสมาชิก</h4>
+                                <h5 class="text-theme">Register</h5>
+                            </div>  
+                            <img class="logo-anim px-2 mb-3 me-2" src="./assets/Images/Rixy.png" style="max-height: 80px; margin-top: -10px;">
+                        </div>
+                        <div id="register-form" class="mt-3">
+                            <div class="input mb-4">
+                                <input class="text-theme" id="username" type="text" value="" placeholder="">
+                                <label class="text-theme">ชื่อผู้ใช้งาน</label>
+                                <h6 class="text-danger mt-1" id="errorUsername" hidden>ชื่อต้องมีความยาว 5-20 ตัวอักษร</h6>
+                            </div>
+                            <div class="input mb-4">
+                                <input class="text-theme" id="email" type="email" value="" placeholder="">
+                                <label class="text-theme">อีเมล</label>
+                            </div>
+                            <div class="input mb-4">
+                                <input class="text-theme" id="password" type="password" value="" placeholder="" >
+                                <label class="text-theme">รหัสผ่าน</label>
+                            </div>
+                            <div class="input mb-2">
+                                <input class="text-theme" id="password_confirm" type="password" value="" placeholder="">
+                                <label class="text-theme">ยืนยันรหัสผ่านอีกครั้ง</label>
+                            </div>
+    
+                        </div>
+                        <center>
+                            
+                                    
+                                                        <button class="btn btn-main nav-link mt-4 mb-3 w-100" id="register_button">สมัครสมาชิก</button>
+                            <span class="text-theme">ถ้ามีบัญชีแล้ว&nbsp;&nbsp;<a class="text-main" style="text-decoration-color: var(--color-main);" href="./Login.html">เข้าสู่ระบบเลย!</a></span>
+                                                </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .hidden-input-auto-fill {
+            opacity: 0 !important;
+            width: 0px !important;
+            height: 0px !important;
+            z-index: 0 !important;
+        }
+    </style>
+    <input type="text" class="hidden-input-auto-fill">
+
+    <style>
+        .footer {
+            position: relative;
+            width: 100%;
+            margin-top: 300px;
+            min-height: 100px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #fff;
+        }
+
+        .wave {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("https://img2.pic.in.th/pic/wave.webp");
+            background-size: 1000px 100px;
+        }
+
+        .wave#wave1 {
+            z-index: 5;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWaves 4s linear infinite;
+        }
+
+        .wave#wave2 {
+            z-index: 4;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animate 4s linear infinite !important;
+        }
+
+        .wave#wave3 {
+            z-index: 5;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: animateWaves 3s linear infinite;
+        }
+
+        .wave#wave4 {
+            z-index: 4;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: animate 3s linear infinite;
+        }
+
+        @keyframes animateWaves {
+            0% {
+                background-position-x: 1000px;
+            }
+
+            100% {
+                background-positon-x: 0px;
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: -1000px;
+            }
+
+            100% {
+                background-positon-x: 0px;
+            }
+        }
+    </style>
+
+    <footer class="footer shadow">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-4 text-center mb-3">
+                    <img style="animation: bounce-3 1s infinite" src="./assets/Images/Rixy.png" width="200">
+                    <br>
+                    <h5 class="text-main" style="animation: bounce 1s infinite">Rixy Studio</h5>
+                    <h6 class="text-main" style="animation: bounce 1s infinite">Rixy Studio จำหน่าย UI | Scripts</h6>
+                </div>
+                <div class="col-12 col-lg-2 mb-3 justify-content-center">
+                    <h5 class="text-main">เมนูหลัก</h5>
+                    <div class="text-left mb-2">
+                        <a href="./index.html" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-house text-main icon-white"></i>&nbsp;หน้าหลัก</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="./Login.html" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-stars text-main icon-white"></i>&nbsp;อัปเกรดฟังชั่น</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-wallet text-main icon-white"></i>&nbsp;เติมเงิน</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="https://discord.gg/ApNxrnDsAN" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-headset text-main icon-white"></i>&nbsp;ติดต่อเรา</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2 mb-3 justify-content-center">
+                    <h5 class="text-main">ประวัติต่างๆ</h5>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-store"></i>&nbsp;&nbsp;ประวัติการซื้อสินค้า</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-wallet"></i>&nbsp;&nbsp;ประวัติการเติมซองอังเปา</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-piggy-bank"></i>&nbsp;&nbsp;ประวัติการเติมเงินธนาคาร</a>
+                    </div>
+                    <div class="text-left mb-2">
+                        <a href="#" style="text-decoration: none; font-size: 13px;" class="text-main"><i class="fa-duotone fa-solid fa-gift"></i>&nbsp;&nbsp;ประวัติการเติมโค้ด</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 text-center mb-3">
+                    <center>
+                        <iframe src="https://discord.com/widget?id=1338708813607469148&theme=dark" width="285" height="280" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    </center>
+                </div>
+            </div>
+            <center style="font-size: 14px;">
+                <p class="m-0 mb-1 text-main"><strong class="text-main"><i class="fa-duotone fa-solid fa-copyright text-main"></i>&nbsp; 2025 Final Project By Ratchanont Chamnankarn, All right reserved.</strong></p>
+                <p class="m-0 text-main"><i class="fa-duotone fa-solid fa-cog fa-spin text-main"></i>&nbsp; Rixy Studio | Inspired By pulawat6680<a href="https://discord.gg/ApNxrnDsAN" style="text-decoration: none;color: #39b3fe"> ติดต่อเจ้าของร้านไม่ได้ / แจ้งปัญหาร้านค้าโกง</a></small>
+            </center>
+        </div>
+    </footer>
+    <script src="./assets/Scripts/FunctionsHandler.js"></script>
+    <script src="./assets/Scripts/Bypulawat6680.js"></script>
+    <script src="./assets/Scripts/sign-up.js"></script>
+</body>
+</html>
